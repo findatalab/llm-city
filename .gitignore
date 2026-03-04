@@ -205,3 +205,16 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# RuBERT training artifacts
+rubert_sentiment_model/
+rubert_sentiment_runs/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Python
+__pycache__/
+
+# Optional dataset ignore
+# data.csv
