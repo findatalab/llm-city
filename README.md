@@ -9,12 +9,12 @@ https://github.com/sismetanin/rureviews
 
 # Структура проекта
 .
-├── baseline_tfidf_models.ipynb   # Baseline модели: TF-IDF + Logistic Regression и Linear SVM
-├── rubert_finetuning.ipynb       # RuBERT для анализа тональности
-├── data/                         # Директория с датасетом
-│   └── data.csv                  # Файл с отзывами
-├── requirements.txt              # Зависимости проекта
-└── README.md                     # Описание проекта
+├── baseline_tfidf_models.ipynb # Baseline модели: TF-IDF + Logistic Regression и Linear SVM
+├── rubert_finetuning.ipynb # Fine-tuning RuBERT для анализа тональности
+├── data/
+│ └── data.csv # Датасет с отзывами
+├── requirements.txt # Зависимости проекта
+└── README.md # Описание проекта
 
 ## Требования
 Python 3.11+
