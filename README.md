@@ -18,7 +18,6 @@ TF-IDF + Linear SVM: accuracy ≈ 0.70,
 TF-IDF + Logistic Regression: accuracy ≈ 0.73,  
 RuBERT: accuracy ≈ 0.78.
 
-# Запуск
 
 ```bash
 pip install -r requirements.txt
