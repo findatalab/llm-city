@@ -17,7 +17,6 @@ lib/
 lib64/
 parts/
 sdist/
-var/
 wheels/
 share/python-wheels/
 *.egg-info/
@@ -78,6 +77,5 @@ local_settings.py
 db.sqlite3
 db.sqlite3-journal
 
-# Project artifacts
 models/rubert/
 models/rubert/checkpoints/
