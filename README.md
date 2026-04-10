@@ -70,7 +70,7 @@ pip install -r requirements.txt
 
 ## Быстрый запуск 
 
-Если модели уже находятся в `models/tfidf/` и `models/rubert/`
+Модель tf-idf уже находятся в `models/tfidf/`
 
 Если папка `models/rubert/` уже есть локально, модель можно использовать сразу.  
 Если её нет, RuBERT нужно один раз дообучить.
