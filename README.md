@@ -3,20 +3,18 @@
 MVP-проект для анализа тональности русскоязычных отзывов с использованием TF-IDF baseline и модели RuBERT.
 
 Проект поддерживает классификацию отзывов по трём классам:
-- `negative`
-- `neutral`
-- `positive`
+    `negative`
+    `neutral`
+    `positive`
 
 ## О проекте
 
 Реализованы:
-- предобработка датасета
-- TF-IDF + Linear SVM
-- TF-IDF + Logistic Regression
-- RuBERT (`DeepPavlov/rubert-base-cased`) с fine-tuning на датасете RuReviews
-- отдельные скрипты для инференса и обучения
-
-Проект приведён к состоянию MVP: обученные модели уже сохранены, поэтому классификацию можно запускать без повторного обучения.
+    предобработка датасета
+    TF-IDF + Linear SVM
+    TF-IDF + Logistic Regression
+    RuBERT (`DeepPavlov/rubert-base-cased`) 
+    отдельные скрипты для инференса и обучения
 
 ## Структура проекта
 
