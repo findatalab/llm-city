@@ -90,12 +90,12 @@ python -m src.models.predict_rubert --text "Очень хороший товар
 ## Результаты
 
 ### TF-IDF + Linear SVM
-    Accuracy: `0.7273`
-    Macro F1: `0.7267`
+    Accuracy: 0.7273
+    Macro F1: 0.7267
 
 ### RuBERT
-    Accuracy: `0.7750`
-    Macro F1: `0.7768`
+    Accuracy: 0.7750
+    Macro F1: 0.7768
 
 RuBERT показал более высокое качество по сравнению с baseline-моделью на TF-IDF.
 
