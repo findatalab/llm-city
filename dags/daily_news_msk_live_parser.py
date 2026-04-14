@@ -28,12 +28,15 @@ import logging
 from datetime import datetime, timedelta, timezone
 
 from airflow import DAG
-from airflow.models import Variable
 from airflow.decorators import task
 from airflow.providers.postgres.hooks.postgres import PostgresHook
+from dotenv import load_dotenv
+import os
 
-API_ID = int(Variable.get("tg_api_id"))
-API_HASH = Variable.get("tg_api_hash")
+load_dotenv("/opt/airflow/dags/.env")
+
+API_ID = int(os.getenv("TG_API_ID"))
+API_HASH = os.getenv("TG_API_HASH")
 CHANNEL = "@msk_live"
 SESSION_PATH = "/opt/airflow/dags/prod_session_tg.session"
 POSTGRES_CONN_ID = "postgres_news"
@@ -61,14 +64,14 @@ with DAG(
 
         async def _parse():
             client = TelegramClient(
-    SESSION_PATH, API_ID, API_HASH,
-    proxy=(socks.HTTP,
-            Variable.get("proxy_host"),
-            int(Variable.get("proxy_port")),
-            True,
-            Variable.get("proxy_user"),
-            Variable.get("proxy_pass"))
-)
+                SESSION_PATH, API_ID, API_HASH,
+                proxy=(socks.HTTP,
+                    os.getenv("PROXY_HOST"),
+                    int(os.getenv("PROXY_PORT")),
+                    True,
+                    os.getenv("PROXY_USER"),
+                    os.getenv("PROXY_PASS"))
+            )
             await client.connect()
 
             hook = PostgresHook(postgres_conn_id=POSTGRES_CONN_ID)
