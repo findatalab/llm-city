@@ -1,0 +1,8 @@
+feedparser
+apache-airflow-providers-postgres
+apache-airflow-providers-git
+yfinance
+telethon
+PySocks
+python-socks[asyncio]
+python-dotenv
