@@ -1,9 +1,14 @@
 pandas>=2.0.0
 numpy>=1.24.0
+gradio
 scikit-learn>=1.3.0
+nltk
+matplotlib
+seaborn
 joblib>=1.3.0
 torch>=2.1.0
 transformers>=4.40.0
 datasets>=2.18.0
+evaluate
 accelerate>=0.28.0
 sentencepiece>=0.1.99

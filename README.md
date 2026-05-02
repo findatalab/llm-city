@@ -70,7 +70,7 @@ pip install -r requirements.txt
 
 ## Быстрый запуск 
 
-Модель tf-idf уже находятся в `models/tfidf/`
+Если модели уже находятся в `models/tfidf/` и `models/rubert/`
 
 Если папка `models/rubert/` уже есть локально, модель можно использовать сразу.  
 Если её нет, RuBERT нужно один раз дообучить.
@@ -88,6 +88,13 @@ python -m src.models.predict_rubert --text "Очень хороший товар
 ```
 
 ## Результаты
+
+Для локального интерактивного предикта используется Gradio-интерфейс в `app.py`.
+Запуск из корня проекта:
+
+```bash
+python app.py
+```
 
 ### TF-IDF + Linear SVM
     Accuracy: 0.7273
