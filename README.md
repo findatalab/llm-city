@@ -1,4 +1,4 @@
-# llm-city
+﻿# llm-city
 
 MVP-проект для анализа тональности русскоязычных отзывов с использованием TF-IDF baseline и модели RuBERT.
 
@@ -15,6 +15,7 @@ MVP-проект для анализа тональности русскоязы
     TF-IDF + Logistic Regression
     RuBERT (`DeepPavlov/rubert-base-cased`) 
     отдельные скрипты для инференса и обучения
+    локальный Gradio-интерфейс для предикта тональности
 
 ## Структура проекта
 
@@ -40,6 +41,7 @@ llm-city/
 │     ├─ predict_tfidf.py
 │     ├─ train_rubert.py
 │     └─ predict_rubert.py
+├─ app.py
 ├─ .gitignore
 ├─ LICENSE
 ├─ README.md
@@ -62,10 +64,47 @@ llm-city/
 - Python 3.11+
 - зависимости из `requirements.txt`
 
-Установка:
+## Как запустить
+
+Клонируйте репозиторий:
 
 ```bash
+git clone https://github.com/findatalab/llm-city.git
+cd llm-city
+```
+
+Создайте venv и установите зависимости:
+
+```bash
+python -m venv venv
+venv\Scripts\activate
 pip install -r requirements.txt
+```
+
+Скачайте дообученные веса RuBERT с Hugging Face и положите их в папку `models/rubert/`:
+
+```bash
+hf download lonelinessxxzz/llm-city-rubert --local-dir models/rubert
+```
+
+Дообученные веса RuBERT доступны на Hugging Face:
+
+https://huggingface.co/lonelinessxxzz/llm-city-rubert
+
+Базовая модель RuBERT:
+
+https://huggingface.co/DeepPavlov/rubert-base-cased
+
+Запустите локальный Gradio-интерфейс:
+
+```bash
+python app.py
+```
+
+После запуска откройте локальную страницу Gradio, например:
+
+```text
+http://127.0.0.1:7860
 ```
 
 ## Быстрый запуск 
